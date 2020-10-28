@@ -1,0 +1,6 @@
+- global config
+- supoort bash
+- support python
+- support go
+- support lua
+- support ruby

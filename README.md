@@ -1,7 +1,8 @@
 # Vimrc-For-Server
 
-[![build status][shield-build]][info-build]
-[![gitter room][shield-gitter]][info-gitter]
+<!-- [![build status][shield-build]][info-build] -->
+<!-- [![gitter room][shield-gitter]][info-gitter] -->
+
 [![license][shield-license]][info-license]
 [![release][shield-release]][info-release]
 [![prs welcome][shield-prs]][info-prs]

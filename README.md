@@ -10,6 +10,8 @@
 
 [TOC]
 
+## Features
+
 ## Requirements
 
 - **Platforms:**
@@ -18,42 +20,28 @@
   - Fedora
   - Ubuntu
 - **Dependencies:**
+  - vim-enhanced
 
 ## Installation
 
-## Usage
+```bash
+yum install vim-enhanced -y
+```
 
-## Examples
-
-## Why?
-
-> If your project does something already catered for by another project or is particularly complex, it’s useful to provide some justification.
-
-## Contributing
-
-See the [contribution guide][info-contribute].
-
-## Support and Migration
-
-> A section on the support status of your project is very helpful, especially once you’ve released a few different major versions. This section is mostly useful to existing users who may need some hand-holding through a migration between major versions of your project.
->
-> A full migration guide might be a bit long to add to your README, I use a `MIGRATION` file in the root of my project repositories and link to it from this section ([see pa11y for an example](https://github.com/springernature/pa11y/blob/master/MIGRATION.md)).
-
-## Frequently asked questions
-
-Please see [FAQ.md][info-faq] for frequently asked questions.
+```bash
+cp dot_vimrc.vim /etc/skel/.vimrc
+cp dot_vimrc.vim ~/.vimrc
+```
 
 ## Thanks
 
 The following excellent people helped massively:
 
 - [Rowan Manning](https://rowanmanning.com)
--
 
 ## License
 
-Vimrc-For-Server is licensed under the [BSD-3-Clause][info-license] license.
-Copyright &copy; 2020, Zak Zhu
+Vimrc-For-Server is licensed under the [BSD-3-Clause][info-license] license. Copyright &copy; 2020, Zak Zhu
 
 [info-build]: https://travis-ci.org/github/zakzhu/vimrc-for-server
 [info-contribute]: CONTRIBUTING.md

@@ -39,6 +39,8 @@ cp dot_vimrc.vim ~/.vimrc
 The following excellent people helped massively:
 
 - [Rowan Manning](https://rowanmanning.com)
+- [Sigal](https://github.com/Sigal-GitHub)
+- 
 
 ## License
 

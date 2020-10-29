@@ -40,7 +40,9 @@ The following excellent people helped massively:
 
 - [Rowan Manning](https://rowanmanning.com)
 - [Sigal](https://github.com/Sigal-GitHub)
-- 
+- [yuri](https://github.com/LEUNGUU)
+- [wklken](https://github.com/wklken)
+- [zyprex](https://github.com/zyprex)
 
 ## License
 

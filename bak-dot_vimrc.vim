@@ -38,8 +38,14 @@ set completeopt=longest,menu
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
-
-
+" auto pair
+inoremap ( ()
+inoremap [ []
+inoremap { {}
+inoremap ' ''
+inoremap " ""
+inoremap < <>
+inoremap ` ``
 
 
 set number

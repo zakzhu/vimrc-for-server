@@ -70,6 +70,23 @@ set nopaste
 
 
 
+func Header(lang)
+  if a:lang == "bash"
+    call setline(1, "#!/bin/bash")
+  elseif a:lang == "lua"
+    call setline(1, "#!/usr/bin/env lua")
+    call setline(2, "-- -*- coding: utf-8 -*-")
+  elseif a:lang == "python"
+    call setline(1, "#!/usr/bin/python")
+    call setline(2, "# -*- coding: utf-8 -*-")
+  elseif a:lang == "ruby"
+    call setline(1, "#!/usr/bin/env ruby")
+    call setline(2, "# -*- coding: utf-8 -*-")
+  endif
+  normal G
+  normal o
+  normal o
+endfunc
 
 
 
@@ -77,23 +94,13 @@ set nopaste
 
 
 " bash settings
-func SetShTitle()
-	call setline(1, "#!/bin/bash")
-	normal G
-endfunc 
-autocmd bufnewfile *.sh call SetShTitle()
-
-" go settings
+autocmd bufnewfile *.sh call Header("bash")
 
 " lua settings
+autocmd bufnewfile *.lua call Header("lua")
 
 " python settings
-func SetPyTitle()
-	call setline(1, "#!/usr/bin/python")
-	call setline(2, "# -*- coding: utf8 -*-")
-	normal G
-endfunc 
-autocmd bufnewfile *.py call SetPyTitle()
+autocmd bufnewfile *.py call Header("python")
 
 func PyIndent()
   set autoindent 
@@ -105,6 +112,7 @@ endfunc
 autocmd bufnewfile,bufread *.py call PyIndent()
 
 " ruby settings
+autocmd bufnewfile *.rb call Header("ruby")
 
 
 

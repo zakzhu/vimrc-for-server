@@ -17,43 +17,21 @@ autocmd bufnewfile,bufread * call DefIndent()
 set autoread
 set noautowrite
 set nocompatible 
-" for search settings
-set hlsearch
-set incsearch    " Incremental search
-set smartcase    " Keep case when searching with *
-set nowrapscan
-" for filetype settings
-filetype indent on
-filetype plugin on
 filetype plugin indent on
-" for history settings
-set history=2000
-" for bell settings
-set novisualbell
-set noerrorbells
-set t_vb=
+
+set number
+
+
+
 " for completion settings
 set completeopt=longest,menu
+
 " 当某一行输入注释，禁止下一行自动输入注释
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
-" auto pair
-inoremap ( ()
-inoremap [ []
-inoremap { {}
-inoremap ' ''
-inoremap " ""
-inoremap < <>
-inoremap ` ``
-
-
-set number
-let &titlestring = expand("%:p")
-set title
-set laststatus=2    " Always show a status line
-set showmatch       " Jump to matching bracket
-set matchpairs+=<:> " Add HTML brackets to pair matching
+set laststatus=2    
+set showmatch       
 set showcmd
 set cursorline
 highlight CursorLine term=bold cterm=bold guibg=Grey40
@@ -70,6 +48,35 @@ set nopaste
 
 
 
+
+
+
+
+
+" title
+let &titlestring = expand("%:p")
+set title
+
+" bell
+set belloff all
+set visualbell off
+
+" search 
+set hlsearch
+set incsearch    
+set smartcase    
+set nowrapscan
+
+" auto pair
+inoremap ( ()
+inoremap [ []
+inoremap { {}
+inoremap ' ''
+inoremap " ""
+inoremap < <>
+inoremap ` ``
+
+" file header
 func Header(lang)
   if a:lang == "bash"
     call setline(1, "#!/bin/bash")
@@ -87,11 +94,6 @@ func Header(lang)
   normal o
   normal o
 endfunc
-
-
-
-
-
 
 " bash settings
 autocmd bufnewfile *.sh call Header("bash")

@@ -27,6 +27,10 @@ The main features:
 - auto pair parentheses when write
 - set file header (support bash, lua, python, ruby)
 
+## Screenshot
+
+![](https://gitee.com/zakzhu/md-images/raw/master/vimrc-for-server/screenshot_vimrc_for_server.png)
+
 ## Requirements
 
 - **Platforms:**

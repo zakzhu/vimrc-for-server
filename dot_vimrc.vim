@@ -120,8 +120,6 @@ autocmd bufnewfile *.lua call Header("lua")
 
 " Python Settings
 autocmd bufnewfile *.py call Header("python")
-
-" autocmd bufnewfile,bufread *.py call PyIndent()
 autocmd bufnewfile,bufread *.py call SpaceIndent(4)
 
 " Ruby Settings

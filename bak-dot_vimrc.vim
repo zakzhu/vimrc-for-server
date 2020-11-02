@@ -30,8 +30,6 @@ autocmd bufnewfile,bufread * call DefIndent()
 
 
 
-" for completion settings
-set completeopt=longest,menu
 
 
 
@@ -45,6 +43,23 @@ set completeopt=longest,menu
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+" wildmenu
+set wildmenu
 
 " status line
 set ruler
@@ -54,21 +69,6 @@ set laststatus=2
 set statusline=%<%F\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %p%%
 highlight StatusLine   cterm=underline,bold ctermfg=Green ctermbg=Black 
 highlight StatusLineNC cterm=underline ctermfg=DarkGreen ctermbg=Black 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 " paste
 set paste

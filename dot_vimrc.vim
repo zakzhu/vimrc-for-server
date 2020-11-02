@@ -19,10 +19,7 @@ au BufWritePre * let &bex = '.' . strftime("%Y-%m-%d@%T") . '~'
 
 " indent & tab
 func SpaceIndent(space)
-  let &shiftwidth = 0 
-  let &tabstop = 0 
-  let &softtabstop = 0 
-  let &shiftwidth = &shiftwidth + a:space
+  let &shiftwidth = a:space
   let &tabstop = &shiftwidth
   let &softtabstop = &shiftwidth
 endfunc

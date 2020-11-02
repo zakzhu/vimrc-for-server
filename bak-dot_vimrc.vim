@@ -4,6 +4,13 @@
 " auto reload .vimrc
 autocmd! bufwritepost .vimrc source %
 
+" use extended function of vim (no compatible with vi)
+set nocompatible 
+
+
+
+
+
 " common settings
 func DefIndent()
   set autoindent
@@ -15,7 +22,6 @@ endfunc
 autocmd bufnewfile,bufread * call DefIndent()
 
 
-set nocompatible 
 
 
 
@@ -27,14 +33,15 @@ set completeopt=longest,menu
 
 
 set laststatus=2    
-set showmatch       
 set showcmd
 
-set nopaste
 
 
+" paste
+set paste
 
-
+" highlights parentheses
+set showmatch
 
 " line
 set number
@@ -63,6 +70,7 @@ set visualbell off
 " search 
 set hlsearch
 set incsearch    
+set ignorecase
 set smartcase    
 set nowrapscan
 

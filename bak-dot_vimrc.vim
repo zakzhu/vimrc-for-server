@@ -18,54 +18,13 @@ set backupdir=/tmp/vimbak
 au BufWritePre * let &bex = '.' . strftime("%Y-%m-%d@%T") . '~'
 
 " indent & tab
-
-
-
-
-
-func DefIndent()
-  set autoindent
-  set smartindent 
-  set expandtab
-  set shiftwidth=2
-  set tabstop=2
-  set softtabstop=2
-  set backspace=indent,eol,start
-endfunc
-autocmd bufnewfile,bufread * call DefIndent()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+set autoindent
+set smartindent 
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set backspace=indent,eol,start
 
 " wildmenu
 set wildmenu
@@ -152,9 +111,7 @@ autocmd bufnewfile *.lua call Header("lua")
 autocmd bufnewfile *.py call Header("python")
 
 func PyIndent()
-  set autoindent 
-  set smartindent 
-  set expandtab
+  set shiftwidth=4
   set tabstop=4
   set softtabstop=4
 endfunc

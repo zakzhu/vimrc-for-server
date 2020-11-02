@@ -34,6 +34,11 @@ cp dot_vimrc.vim /etc/skel/.vimrc
 cp dot_vimrc.vim ~/.vimrc
 ```
 
+```bash
+mkdir /tmp/vimbak
+chmod 1777 /tmp/vimbak
+```
+
 ## Thanks
 
 The following excellent people helped massively:

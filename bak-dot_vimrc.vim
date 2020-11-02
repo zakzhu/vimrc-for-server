@@ -10,6 +10,10 @@ set nocompatible
 " show color display
 syntax on
 
+" backup
+set backup
+set backupdir=/tmp/vimbak
+au BufWritePre * let &bex = '.' . strftime("%Y-%m-%d@%T") . '~'
 
 
 

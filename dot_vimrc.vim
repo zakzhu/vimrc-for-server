@@ -123,4 +123,4 @@ autocmd bufnewfile *.py call Header("python")
 autocmd bufnewfile,bufread *.py call SpaceIndent(4)
 
 " Ruby Settings
-autocmd bufnewfile *.rb call Header("ruby")
+autocmd bufnewfile *.rb,*.ruby call Header("ruby")

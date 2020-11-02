@@ -7,6 +7,10 @@ autocmd! bufwritepost .vimrc source %
 " use extended function of vim (no compatible with vi)
 set nocompatible 
 
+" show color display
+syntax on
+
+
 
 
 
@@ -32,8 +36,35 @@ set completeopt=longest,menu
 
 
 
-set laststatus=2    
+
+
+
+
+
+
+
+
+
+
+" status line
+set laststatus=2
+set ruler
 set showcmd
+set showmode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,7 +80,7 @@ set wrap
 set linebreak
 set breakindent
 set cursorline
-highlight CursorLine term=bold cterm=bold guibg=Grey40
+highlight cursorline term=bold cterm=bold guibg=Grey40
 
 " filetype
 filetype plugin indent on

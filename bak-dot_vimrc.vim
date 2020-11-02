@@ -47,11 +47,13 @@ set completeopt=longest,menu
 
 
 " status line
-set laststatus=2
 set ruler
 set showcmd
 set showmode
-
+set laststatus=2
+set statusline=%<%F\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %p%%
+highlight StatusLine   cterm=underline,bold ctermfg=Green ctermbg=Black 
+highlight StatusLineNC cterm=underline ctermfg=DarkGreen ctermbg=Black 
 
 
 

@@ -14,44 +14,43 @@ func DefIndent()
 endfunc
 autocmd bufnewfile,bufread * call DefIndent()
 
-set autoread
-set noautowrite
-set nocompatible 
-filetype plugin indent on
 
-set number
+set nocompatible 
+
 
 
 
 " for completion settings
 set completeopt=longest,menu
 
-" 当某一行输入注释，禁止下一行自动输入注释
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 
 
 set laststatus=2    
 set showmatch       
 set showcmd
-set cursorline
-highlight CursorLine term=bold cterm=bold guibg=Grey40
-set linebreak
+
 set nopaste
 
 
 
 
 
+" line
+set number
+set wrap
+set linebreak
+set breakindent
+set cursorline
+highlight CursorLine term=bold cterm=bold guibg=Grey40
 
+" filetype
+filetype plugin indent on
+autocmd filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-
-
-
-
-
-
-
-
+" read & write
+set autoread
+set noautowrite
 
 " title
 let &titlestring = expand("%:p")

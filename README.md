@@ -7,17 +7,25 @@
 [![release][shield-release]][info-release]
 [![prs welcome][shield-prs]][info-prs]
 
-> Project description
+
 
 [TOC]
 
 ## Features
 
+The main features:
 
-
-## Screenshot
-
-![image-20201103033853347](/root/.config/Typora/typora-user-images/image-20201103033853347.png)
+- backup in /tmp/vimbak
+- smart indent
+- graceful status line
+- highlight parentheses
+- highlight number and cursor line
+- vertical bar cursor at insert mode
+- show title
+- turn off all bells
+- friendly search
+- auto pair parentheses when write
+- set file header (support bash, lua, python, ruby)
 
 ## Requirements
 

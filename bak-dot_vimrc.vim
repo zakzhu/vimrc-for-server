@@ -63,8 +63,8 @@ let &titlestring = expand("%:p")
 set title
 
 " bell
-set belloff all
-set visualbell off
+set noerrorbells
+set novisualbell
 
 " search 
 set hlsearch
@@ -119,9 +119,3 @@ autocmd bufnewfile,bufread *.py call PyIndent()
 
 " Ruby Settings
 autocmd bufnewfile *.rb call Header("ruby")
-
-
-
-
-
-

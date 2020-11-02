@@ -4,6 +4,8 @@
 " auto reload .vimrc
 autocmd! bufwritepost .vimrc source %
 
+" Common Settings
+
 " use extended function of vim (no compatible with vi)
 set nocompatible 
 
@@ -15,17 +17,20 @@ set backup
 set backupdir=/tmp/vimbak
 au BufWritePre * let &bex = '.' . strftime("%Y-%m-%d@%T") . '~'
 
+" indent & tab
 
 
 
 
-" common settings
+
 func DefIndent()
   set autoindent
   set smartindent 
   set expandtab
+  set shiftwidth=2
   set tabstop=2
   set softtabstop=2
+  set backspace=indent,eol,start
 endfunc
 autocmd bufnewfile,bufread * call DefIndent()
 
@@ -74,15 +79,13 @@ set statusline=%<%F\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\
 highlight StatusLine   cterm=underline,bold ctermfg=Green ctermbg=Black 
 highlight StatusLineNC cterm=underline ctermfg=DarkGreen ctermbg=Black 
 
-" paste
-set paste
-
 " highlights parentheses
 set showmatch
 
 " line
 set number
 set wrap
+set showbreak=>\
 set linebreak
 set breakindent
 set cursorline
@@ -139,13 +142,13 @@ func Header(lang)
   normal o
 endfunc
 
-" bash settings
+" Bash Settings
 autocmd bufnewfile *.sh call Header("bash")
 
-" lua settings
+" Lua Settings
 autocmd bufnewfile *.lua call Header("lua")
 
-" python settings
+" Python Settings
 autocmd bufnewfile *.py call Header("python")
 
 func PyIndent()
@@ -157,7 +160,7 @@ func PyIndent()
 endfunc
 autocmd bufnewfile,bufread *.py call PyIndent()
 
-" ruby settings
+" Ruby Settings
 autocmd bufnewfile *.rb call Header("ruby")
 
 

@@ -7,7 +7,7 @@
 [![release][shield-release]][info-release]
 [![prs welcome][shield-prs]][info-prs]
 
-
+Practical and simple vim config for server.
 
 [TOC]
 

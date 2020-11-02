@@ -35,8 +35,8 @@ set showcmd
 set showmode
 set laststatus=2
 set statusline=%<%F\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %p%%
-highlight StatusLine   cterm=underline,bold ctermfg=Green ctermbg=Black 
-highlight StatusLineNC cterm=underline ctermfg=DarkGreen ctermbg=Black 
+highlight StatusLine   cterm=underline,bold ctermfg=Green
+highlight StatusLineNC cterm=underline ctermfg=DarkGreen
 
 " highlights parentheses
 set showmatch
@@ -44,11 +44,15 @@ set showmatch
 " line
 set number
 set wrap
-set showbreak=>\
 set linebreak
 set breakindent
 set cursorline
-highlight cursorline term=bold cterm=bold guibg=Grey40
+highlight cursorline term=bold cterm=bold
+highlight cursorlinenr term=bold,underline cterm=bold,underline
+
+" cursor
+let &t_SI = "\e[5 q"                                                                                                                                          
+let &t_EI = "\e[2 q"
 
 " filetype
 filetype plugin indent on

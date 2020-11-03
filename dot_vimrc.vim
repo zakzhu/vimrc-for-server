@@ -49,7 +49,6 @@ set showmatch
 set number
 set wrap
 set linebreak
-set breakindent
 set cursorline
 highlight cursorline term=bold cterm=bold
 highlight cursorlinenr term=bold,underline cterm=bold,underline

@@ -51,7 +51,7 @@ set wrap
 set linebreak
 set cursorline
 highlight cursorline term=bold cterm=bold
-highlight cursorlinenr term=bold,underline cterm=bold,underline
+highlight cursorlinenr term=bold,underline cterm=bold,underline ctermfg=Red
 
 " cursor
 let &t_SI = "\e[5 q"                                                                                                                                          

@@ -17,6 +17,9 @@ set backup
 set backupdir=/tmp/vimbak
 au BufWritePre * let &bex = '.' . strftime("%Y-%m-%d@%T") . '~'
 
+" screen redraw
+set lazyredraw
+
 " indent & tab
 func SpaceIndent(space)
   let &shiftwidth = a:space
@@ -33,14 +36,22 @@ set backspace=indent,eol,start
 " wildmenu
 set wildmenu
 
+" command
+set showcmd
+set cmdheight=2
+
+" mode
+set showmode
+highlight modemsg term=bold cterm=bold ctermfg=Red
+
 " status line
 set ruler
-set showcmd
-set showmode
 set laststatus=2
 set statusline=%<%F\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %p%%
 highlight StatusLine   cterm=underline,bold ctermfg=Green
-highlight StatusLineNC cterm=underline ctermfg=DarkGreen
+highlight StatusLineTerm   cterm=underline,bold ctermfg=Green
+highlight StatusLine   cterm=underline,bold ctermfg=Green
+highlight StatusLineTermNC cterm=underline ctermfg=DarkGreen
 
 " highlights parentheses
 set showmatch

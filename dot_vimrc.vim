@@ -42,7 +42,7 @@ set cmdheight=2
 
 " mode
 set showmode
-highlight modemsg term=bold cterm=bold ctermfg=Red
+highlight modemsg term=underline,bold cterm=underline,bold ctermfg=Red
 
 " status line
 set ruler
@@ -50,8 +50,8 @@ set laststatus=2
 set statusline=%<%F\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %p%%
 highlight StatusLine   cterm=underline,bold ctermfg=Green
 highlight StatusLineTerm   cterm=underline,bold ctermfg=Green
-highlight StatusLine   cterm=underline,bold ctermfg=Green
-highlight StatusLineTermNC cterm=underline ctermfg=DarkGreen
+highlight StatusLineNC   cterm=underline,bold ctermfg=DarkGreen
+highlight StatusLineTermNC cterm=underline,bold ctermfg=DarkGreen
 
 " highlights parentheses
 set showmatch

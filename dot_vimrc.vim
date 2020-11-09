@@ -108,7 +108,7 @@ func Header(lang)
     call setline(1, "#!/usr/bin/env lua")
     call setline(2, "-- -*- coding: utf-8 -*-")
   elseif a:lang == "python"
-    call setline(1, "#!/usr/bin/python")
+    call setline(1, "#!/usr/bin/env python")
     call setline(2, "# -*- coding: utf-8 -*-")
   elseif a:lang == "ruby"
     call setline(1, "#!/usr/bin/env ruby")

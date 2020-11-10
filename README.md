@@ -25,7 +25,7 @@ The main features:
 - turn off all bells
 - friendly search
 - auto pair parentheses when write
-- set file header (support bash, lua, python, ruby)
+- set file header (support bash, lua, perl, python, ruby)
 
 ## Screenshot
 

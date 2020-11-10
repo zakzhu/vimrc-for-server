@@ -107,6 +107,8 @@ func Header(lang)
   elseif a:lang == "lua"
     call setline(1, "#!/usr/bin/env lua")
     call setline(2, "-- -*- coding: utf-8 -*-")
+  elseif a:lang == "perl"
+    call setline(1, "#!/usr/bin/perl")
   elseif a:lang == "python"
     call setline(1, "#!/usr/bin/env python")
     call setline(2, "# -*- coding: utf-8 -*-")
@@ -124,6 +126,9 @@ autocmd bufnewfile *.sh call Header("bash")
 
 " Lua Settings
 autocmd bufnewfile *.lua call Header("lua")
+
+" Perl Settings
+autocmd bufnewfile *.pl call Header("perl")
 
 " Python Settings
 autocmd bufnewfile *.py call Header("python")

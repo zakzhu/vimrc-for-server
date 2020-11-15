@@ -1,4 +1,5 @@
 " @Author: Zak Zhu
+" @Release: v1.3.4
 " @Github Repo: https://github.com/zakzhu/vimrc-for-server
 
 " auto reload .vimrc
